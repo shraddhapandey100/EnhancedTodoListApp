@@ -1,6 +1,7 @@
 # Enhanced Todo List Application
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+> ✨ an enhanced Todo List application using ReactJS, TypeScript, and SCSS.
+.
 
 ## Script Run Guidance.
 
