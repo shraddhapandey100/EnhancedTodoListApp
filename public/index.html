@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Todo List App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 5px;
+      padding: 10px;
+      background-color: #f4f4f4;
+    }
+    #list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .task-item {
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 10px; 
+
+    }
+    .task-item i {
+      cursor: pointer;
+      color: red;
+    }
+    .task-title {
+      margin: 0;
+      flex-grow: 1;
+    }
+    #new-task-form {
+      margin-top: 20px;
+      display: flex;
+    }
+    #new-task-title {
+      flex-grow: 1;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    #add-btn {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+    #add-btn:hover {
+      background-color: #0056b3;
+    }
+    
+li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="text"], textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  width: calc(100% - 230px); 
+  margin-right: 10px;
+}
+
+input[type="text"]:read-only,
+textarea:read-only {
+  background-color: #f9f9f9;
+  border: none;
+  cursor: pointer;
+}
+
+/* Button styling */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red */
+}
+
+.delete-btn:hover {
+  background-color: #d73833;
+}
+
+.edit-btn {
+  background-color: #ffc107; /* Amber */
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+/* Dropdown styling */
+select {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 1;
+  box-sizing: border-box;
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 1 1;
+  background-size: 0.65em auto, 100%;
+}
+
+select:focus {
+  border-color: #85b7d9;
+  outline: none;
+}
+
+/* Style the option list */
+option {
+  padding: 0.5em;
+}
+
+    
+  </style>
+</head>
+<body style=" background-color: rgb(157, 189, 233);" >
+  <div style="max-width: 600px; margin: 20px auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center;">Todo List</h2>
+     <!-- Filter Dropdown -->
+     <select id="filter-select">
+      <option value="all">All</option>
+      <option value="active">Active</option>
+      <option value="completed">Completed</option>
+    </select>
+    <ul id="list"></ul>
+    <form id="new-task-form">
+      <input type="text" id="new-task-title" placeholder="Enter task title">
+      <button id="add-btn" type="submit" style="margin-right: 5px;"><i class="fas fa-plus"></i> Add</button>
+    </form>
+  </div>
+  <!-- Todo List App Script -->
+  <script src="dist/index.js" type="module"></script>
+</body>
+</html>
