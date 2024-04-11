@@ -4,7 +4,8 @@
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
-    "lint": "prettier --check \"src/**/*.{ts,js}\""
+    "lint": "prettier --check \"src/**/*.{ts,js}\"",
+    "clean": "rimraf build"
   },
   "dependencies": {
     "canvas-confetti": "^1.2.0"
@@ -15,6 +16,7 @@
     "@types/snowpack-env": "^2.3.3",
     "@types/uuid": "^9.0.8",
     "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "snowpack": "^3.3.7",
     "typescript": "^4.2.4"
   }
