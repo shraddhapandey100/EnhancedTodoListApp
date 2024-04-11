@@ -1,7 +1,7 @@
 # Enhanced Todo List Application
 
 > ✨ an enhanced Todo List application using ReactJS, TypeScript, and SCSS.
-.
+![](https://github.com/shraddhapandey100/)
 
 ## Script Run Guidance.
 
